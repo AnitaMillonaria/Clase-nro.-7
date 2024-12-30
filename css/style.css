@@ -1,4 +1,3 @@
-/*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2? family= Aclonica & display=swap');
 
 
@@ -31,30 +30,28 @@ box-sizing:border-box;
 0%
 {
     transform:rotateY(180deg);
-}
+}}
 body
 {
     padding: 0 30px;
 }
-}
+
 header
 {
+    height: 160px;
+    background:var(--crema);
     display: flex;
-    flex-direction: row;
+    flex-direction: row;   
     justify-content: space-between;   
     align-items: center;
     align-content: space-around;
-
-/*width: 98%;*/
-height: 180px;
-border: 3px #004225 solid;
-/*margin: 20px 60px 20px 20px;*/
-border-radius: 20px;
+    border: 3px #004225 solid;
+    border-radius: 10px;
 }
 .logotipo
 {
     margin-left: 30px;
-    max-height: 100%;
+    max-height:100%;
     animation-name: rotación;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -75,43 +72,39 @@ border-radius: 20px;
     text-align: center;
 
 }
-.opciones-menu
-{
-    margin-right: 30px;
+    /*FLEXBOX DEL NAV*/
+    .opciones-menu/*icono*/
+    {
+        margin-right: 50px;
+        font-size: 2rem;/*tamaño del icono*/
+        
+    }
+    #opciones:checked ~ .lista-des/*características de la lista dentro del "nav"*/
+    {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    background-color:var(--amarillo);
+    row-gap: 5px;
+    right:30px;
+    border-radius: 0 20px;
+    padding: 10px;
+    top:157px;
     
-}
+    }
+    #opciones
+    {
+        display: none;
+    }
+    
+    .lista-des
+    {
+        display:none;
+    list-style: none;
+    font-size: 1.5rem;
+    text-shadow: 0 0 15px var(--rojo);
+    }
 
-/* FLEXBOX*/
-#opciones:checked ~ .lista-des
-{
-display: flex;
-flex-flow: column;
-position: absolute;
-background-color:var(--amarillo);
-row-gap: 25px;
-right:0;
-border-radius: 0 20px;
-padding: 20px;
-top:200px;
-
-}
-#opciones
-{
-    display: none;
-}
-.menu-opcion
-{
-    font-size: 2rem;
-
-}
-.lista-des
-{
-    display:none;
-list-style: none;
-column-gap: 15px;
-font-size: 2rem;
-text-shadow: 0 0 15px var(--rojo);
-}
 .contenedor
 {
     /*width: 98%;*/
@@ -131,7 +124,7 @@ text-shadow: 0 0 15px var(--rojo);
 }
 .imagen
 {
-    height: 200px;
+    height: 160px;
     width: 200px;    
     background-size: cover;
     /*margin-top: 50px;*/
@@ -143,7 +136,7 @@ text-shadow: 0 0 15px var(--rojo);
 #sorrentinos
 {
     width: 80%;
-    height: 200px;
+    /*height: 180px;*/
 display:flex;
 align-items: center;
 flex-direction: row;
@@ -152,7 +145,7 @@ justify-content: space-between;
 .A 
 {
   
-    background-image: url(../assets/Imagen\ 1.png); 
+    background-image: url(../assets/Imagen\ 1.png );
     background-repeat: no-repeat;  
     
     
@@ -190,12 +183,12 @@ justify-content: space-between;
 /* Footer*/
 footer
 {
-    /*width: 96%;
-    height: 700px;*/
+    width: 100%;
+    height: 700px;
     background-color: var(--beige);  
-    /*margin-left: 30px;  
-    margin-right: 100px;     
-    margin-bottom: 50px;*/
+    /*margin-left: 30px;  */
+    margin-right: 0px;     
+    margin-bottom: 50px;
     border-radius: 15px;
 
 }
@@ -232,7 +225,7 @@ h3
     flex-direction: row;
     gap:100px;
     justify-content: center;
-    font-size:xx-large;
+    font-size:1.5rem;
     font-family: var(--texto);
 
 }
@@ -277,18 +270,48 @@ p
    text-decoration: underline;
      
 }
-/*Media query*/
+/*Media query
 @media(min-width:0px) and (max-width:480px)
 {
-    header
-    {
-        height: 50px;
-        background: var(--amarillo);
-        display: flex;
-        flex-direction: row;
-    }
+body
+{
+    padding: 0 30px;
+}
+
+header
+{
+    height: 40px;
+    background: var(--amarillo);
+    display: flex;
+    flex-direction: row;
+    font-size :0.2em;
+}
+
+
+.logotipo
+{
+    margin-left: 5px;
+    max-height: 50%;
+    /*animation-name: rotación;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    width: 30px;
+    height: 30px;
+}
+.titulos h1
+{
     
-    .opciones-menu
-    {
-    display: none;
-}}
+    font-family:var(--Titulos) ;
+    color:black;
+    text-align: center;
+
+}
+.titulos h2
+{
+    
+    font-family: var(--texto);
+    color:black;
+    text-align: center;
+
+}*/
+    
